@@ -1,4 +1,4 @@
-= Juego de Ninjas - 2021
+= Juego de Sakura - 2021
 Lucas Prieto 43.626.494/2020 <lucasprieto30@gmail.com>; Giannina Perez 43.729.769/2020 <giannina-b-perez@hotmail.com>; Augusto López_Arias 43.728.451/2020 <batu0901@hotmail.com>
 v1, {docdate}. Docentes: Hernán Rondelli y Leonardo Waingarten (COM-01)
 :title-page:
@@ -8,12 +8,7 @@ v1, {docdate}. Docentes: Hernán Rondelli y Leonardo Waingarten (COM-01)
 
 == Introducción
 
-La florería Yamanaka-Haruno está ubicada en una aldea ninja, que suele ser atacada por
-ninjas enemigos. Esto complica el trabajo de Sakura que debe entregar los pedidos evitando
-y combatiendo a los ninjas enemigos.
-
-El objetivo de este proyecto es desarrollar un videojuego a partir de un `entorno.jar` en el cual Sakura entregue
-los pedidos sin perder la vida a manos de los ninjas enemigos.
+El objetivo de este proyecto es desarrollar un videojuego a partir de un `entorno.jar` en Java. El videojuego es sobre Sakura, quien tiene una florería que suele ser atacada por ninjas enemigos. Esto complica su trabajo, el cual consiste en entregar los pedidos de flores evitando y combatiendo a los ninjas enemigos para no perder la vida.
 
 == Descripción
 
