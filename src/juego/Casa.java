@@ -13,7 +13,7 @@ public class Casa {
 	private double tamaño;
 	private double direccion;
 	private Image casaRoja;
-	private Image casaAzul;
+	private Image casaMarron;
 	private Image flecha;
 
 	public Casa(int numero, double x, double y, double direccion) {
@@ -23,7 +23,7 @@ public class Casa {
 		this.y = y;
 		this.flecha = Herramientas.cargarImagen("flecha.gif");
 		this.casaRoja = Herramientas.cargarImagen("casaRoja.png");
-		this.casaAzul = Herramientas.cargarImagen("casaAzul.png");
+		this.casaMarron = Herramientas.cargarImagen("casaMarron.png");
 		this.tamaño = casaRoja.getWidth(null);
 	}
 
@@ -31,7 +31,7 @@ public class Casa {
 		if (this.numero % 2 == 0) {
 			e.dibujarImagen(casaRoja, x, y, direccion, 0.8);
 		} else {
-			e.dibujarImagen(casaAzul, x, y, direccion, 0.8);
+			e.dibujarImagen(casaMarron, x, y, direccion, 0.8);
 		}
 	}
 

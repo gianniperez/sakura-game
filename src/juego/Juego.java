@@ -15,12 +15,12 @@ public class Juego extends InterfaceJuego {
 	private Entorno entorno;
 	private Calle[] calles;
 	private Casa[] casas;
-	private Sakura sakura;
 	private Ninja[] ninjas;
+	private Sakura sakura;
 	private Rasengan rasengan;
 	private Casa casaDelPedido;
-	private int numeroCasaDelPedido;
-	private Random numeroRandom;
+	private int numCasaDelPedido;
+	private Random numRandom;
 	private int puntos;
 	private int ninjasEliminados;
 	private Image fondo;
@@ -69,94 +69,96 @@ public class Juego extends InterfaceJuego {
 
 		// Creacion de calles y casas
 		calles = new Calle[7];
-		int k = 0;
-		double xx = entorno.ancho() / 2;
-		int yy = entorno.alto() / 5;
-		int ancho = entorno.ancho();
-		int alto = 40;
+		int calle = 0;
+		double xCalle = entorno.ancho() / 2;
+		int yCalle = entorno.alto() / 5;
+		int anchoCalle = entorno.ancho();
+		int altoCalle = 40;
+
 		casas = new Casa[41];
+		int casa = 0;
 		int xCasa = 200;
 		int yCasa = 40;
-		int g = 0;
+		
 		for (int j = 0; j < calles.length; j++) {
-			calles[k++] = new Calle(xx, yy, ancho, alto);
+			calles[calle++] = new Calle(xCalle, yCalle, anchoCalle, altoCalle);
 
-			if (k == 1) {
-				yy = entorno.alto() / 2;
-				for (int c = 0; c < 3; c++) {
-					casas[g++] = new Casa(c, xCasa, yy - 230, Math.PI);
+			if (calle == 1) {
+				yCalle = entorno.alto() / 2;
+				for (int numCasa = 0; numCasa < 3; numCasa++) {
+					casas[casa++] = new Casa(numCasa, xCasa, yCalle - 230, Math.PI);
 					xCasa += 200;
 				}
 				xCasa = 200;
 				for (int d = 3; d < 6; d++) {
-					casas[g++] = new Casa(d, xCasa, yy - 50, Math.PI);
+					casas[casa++] = new Casa(d, xCasa, yCalle - 50, Math.PI);
 					xCasa += 200;
 				}
 				xCasa = 200;
 				for (int e = 6; e < 9; e++) {
-					casas[g++] = new Casa(e, xCasa, yy + 130, Math.PI);
+					casas[casa++] = new Casa(e, xCasa, yCalle + 130, Math.PI);
 					xCasa += 200;
 				}
 
 			}
-			if (k == 2) {
-				yy = entorno.alto() - entorno.alto() / 5;
+			if (calle == 2) {
+				yCalle = entorno.alto() - entorno.alto() / 5;
 			}
-			if (k == 3 || k == 4 || k == 5 || k == 6) {
+			if (calle == 3 || calle == 4 || calle == 5 || calle == 6) {
 
-				yy = entorno.alto() / 2;
-				ancho = 40;
-				alto = entorno.alto();
+				yCalle = entorno.alto() / 2;
+				anchoCalle = 40;
+				altoCalle = entorno.alto();
 
-				if (k == 3) {
-					xx = entorno.ancho() / 8;
+				if (calle == 3) {
+					xCalle = entorno.ancho() / 8;
 					for (int f = 9; f < 13; f++) {
-						casas[g++] = new Casa(f, xx - 50, yCasa, Math.PI / 2);
+						casas[casa++] = new Casa(f, xCalle - 50, yCasa, Math.PI / 2);
 						yCasa += 170;
 					}
 					yCasa = 40;
 					for (int h = 13; h < 17; h++) {
-						casas[g++] = new Casa(h, xx + 50, yCasa, Math.PI / 2);
+						casas[casa++] = new Casa(h, xCalle + 50, yCasa, Math.PI / 2);
 						yCasa += 170;
 					}
 					yCasa = 40;
 
 				}
-				if (k == 4) {
-					xx = entorno.ancho() / 2.66;
+				if (calle == 4) {
+					xCalle = entorno.ancho() / 2.66;
 					for (int l = 17; l < 21; l++) {
-						casas[g++] = new Casa(l, xx - 50, yCasa, Math.PI / 2);
+						casas[casa++] = new Casa(l, xCalle - 50, yCasa, Math.PI / 2);
 						yCasa += 165;
 					}
 					yCasa = 40;
 					for (int m = 21; m < 25; m++) {
-						casas[g++] = new Casa(m, xx + 50, yCasa, Math.PI / 2);
+						casas[casa++] = new Casa(m, xCalle + 50, yCasa, Math.PI / 2);
 						yCasa += 165;
 					}
 					yCasa = 40;
 				}
-				if (k == 5) {
-					xx = entorno.ancho() - entorno.ancho() / 2.66;
+				if (calle == 5) {
+					xCalle = entorno.ancho() - entorno.ancho() / 2.66;
 					for (int l = 25; l < 29; l++) {
-						casas[g++] = new Casa(l, xx - 50, yCasa, Math.PI / 2);
+						casas[casa++] = new Casa(l, xCalle - 50, yCasa, Math.PI / 2);
 						yCasa += 165;
 					}
 					yCasa = 40;
 					for (int m = 29; m < 33; m++) {
-						casas[g++] = new Casa(m, xx + 50, yCasa, Math.PI / 2);
+						casas[casa++] = new Casa(m, xCalle + 50, yCasa, Math.PI / 2);
 						yCasa += 165;
 					}
 					yCasa = 40;
 				}
-				if (k == 6) {
-					xx = entorno.ancho() - entorno.ancho() / 8;
+				if (calle == 6) {
+					xCalle = entorno.ancho() - entorno.ancho() / 8;
 					for (int q = 33; q < 37; q++) {
-						casas[g++] = new Casa(q, xx - 50, yCasa, Math.PI / 2);
+						casas[casa++] = new Casa(q, xCalle - 50, yCasa, Math.PI / 2);
 						yCasa += 165;
 					}
 					yCasa = 40;
 					for (int w = 37; w < 41; w++) {
-						casas[g++] = new Casa(w, xx + 50, yCasa, Math.PI / 2);
+						casas[casa++] = new Casa(w, xCalle + 50, yCasa, Math.PI / 2);
 						yCasa += 165;
 					}
 				}
@@ -165,9 +167,9 @@ public class Juego extends InterfaceJuego {
 			lineasCalle = Herramientas.cargarImagen("lineasCalle.png");
 			arboles = Herramientas.cargarImagen("arboles.png");
 		}
-		numeroRandom = new Random();
-		numeroCasaDelPedido = numeroRandom.nextInt(casas.length);
-		casaDelPedido = casas[numeroCasaDelPedido];
+		numRandom = new Random();
+		numCasaDelPedido = numRandom.nextInt(casas.length);
+		casaDelPedido = casas[numCasaDelPedido];
 		imagenGameOver = Herramientas.cargarImagen("gameover.png");
 
 		// Inicializar lo que haga falta para el juego
@@ -266,8 +268,8 @@ public class Juego extends InterfaceJuego {
 			}
 		}
 		if (sakura.llegoACasaDelPedido(casaDelPedido)) {
-			numeroCasaDelPedido = numeroRandom.nextInt(casas.length);
-			casaDelPedido = casas[numeroCasaDelPedido];
+			numCasaDelPedido = numRandom.nextInt(casas.length);
+			casaDelPedido = casas[numCasaDelPedido];
 			puntos += 5;
 			cantidadDeRasengans = 3;
 			ninjaQueReaparecera = 0;
@@ -292,15 +294,15 @@ public class Juego extends InterfaceJuego {
 
 		entorno.dibujarImagen(arboles, entorno.ancho() / 2, entorno.alto() / 2, 0);
 		casaDelPedido.marcar(entorno);
-		entorno.cambiarFont("sans", entorno.alto() / 33, Color.RED);
+		entorno.cambiarFont("consolas", entorno.alto() / 28, Color.BLACK);
 		entorno.escribirTexto("Rasengans: " + cantidadDeRasengans, entorno.ancho() / 78, entorno.alto() / 15);
-		entorno.escribirTexto("Pts: " + puntos, entorno.ancho() - entorno.ancho() / 11, entorno.alto() / 35);
+		entorno.escribirTexto("Pts: " + puntos, entorno.ancho() - entorno.ancho() / 9, entorno.alto() / 35);
 		entorno.escribirTexto("Kills: " + ninjasEliminados, entorno.ancho() / 80, entorno.alto() / 35);
 
 		if (finDelJuego) {
 			entorno.dibujarImagen(imagenGameOver, entorno.ancho() / 2, entorno.alto() / 2, 0);
-			entorno.cambiarFont("sans", entorno.alto() / 33, Color.CYAN);
-			entorno.escribirTexto("Puntuacion Total: " + puntos, entorno.ancho() / 2.5, entorno.alto() - 90);
+			entorno.cambiarFont("consolas", entorno.alto() / 16, new Color(255, 12, 101));
+			entorno.escribirTexto("" + puntos, entorno.ancho() / 1.4, entorno.alto() - 90);
 		}
 
 		// Procesamiento de un instante de tiempo
