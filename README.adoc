@@ -11,9 +11,6 @@ v1, {docdate}. Docentes: Hernán Rondelli y Leonardo Waingarten (COM-01)
 == Introducción
 
 El objetivo de mi primer proyecto fue desarrollar un videojuego con programación orientada a objetos. Este se construyó a partir de un `entorno.jar` en Java. El videojuego consiste en controlar a Sakura, quien debe entregar pedidos de una florería en las casas de su aldea. Su trabajo se complica al tener ninjas enemigos rondando por la zona, por lo cual Sakura deberá esquivarlos para no ser atacada. Su rasengan le permite matar ninjas para liberar la zona, pero estos reaparecen al entregar un pedido.
-=======
-El objetivo de mi primer proyecto fue desarrollar un videojuego con programación orientada a objetos. Este se construyó a partir de un `entorno.jar` en Java.
-El videojuego consiste en controlar a Sakura, quien debe entregar pedidos de una florería en las casas de su aldea. Su trabajo se complica al tener ninjas enemigos rondando por la zona, por lo cual Sakura deberá esquivarlos para no ser atacada. Su rasengan le permite matar ninjas para liberar la zona, pero estos reaparecen al entregar un pedido.
 
 == Descripción
 
