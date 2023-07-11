@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-= Juego de Ninjas - 2021
-=======
 = Juego de Sakura - 2021
->>>>>>> 6af86bc58dff4cde56b91b4437c15c988fe6518e
+
 Giannina Perez 43.729.769/2020 <giannina-b-perez@hotmail.com>
 v1, {docdate}. Docentes: Hernán Rondelli y Leonardo Waingarten (COM-01)
+
 :title-page:
 :numbered:
 :source-highlighter: coderay
@@ -12,12 +10,10 @@ v1, {docdate}. Docentes: Hernán Rondelli y Leonardo Waingarten (COM-01)
 
 == Introducción
 
-<<<<<<< HEAD
 El objetivo de mi primer proyecto fue desarrollar un videojuego con programación orientada a objetos. Este se construyó a partir de un `entorno.jar` en Java. El videojuego consiste en controlar a Sakura, quien debe entregar pedidos de una florería en las casas de su aldea. Su trabajo se complica al tener ninjas enemigos rondando por la zona, por lo cual Sakura deberá esquivarlos para no ser atacada. Su rasengan le permite matar ninjas para liberar la zona, pero estos reaparecen al entregar un pedido.
 =======
 El objetivo de mi primer proyecto fue desarrollar un videojuego con programación orientada a objetos. Este se construyó a partir de un `entorno.jar` en Java.
 El videojuego consiste en controlar a Sakura, quien debe entregar pedidos de una florería en las casas de su aldea. Su trabajo se complica al tener ninjas enemigos rondando por la zona, por lo cual Sakura deberá esquivarlos para no ser atacada. Su rasengan le permite matar ninjas para liberar la zona, pero estos reaparecen al entregar un pedido.
->>>>>>> 6af86bc58dff4cde56b91b4437c15c988fe6518e
 
 == Descripción
 
